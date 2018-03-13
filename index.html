@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>dimensions</title>
+    <link rel="stylesheet" type="text/css" href="ui.css">
+    <script src="js/dat.gui.min.js"></script>
+    <script src="js/aframe-v0.7.1.js"></script>
+    <script src="js/aframe-sun-sky.js"></script>
+    <script src="js/aframe-look-at-component.js"></script>
+    <script src="js/aframe-gif-shader.js"></script>
+    <script src="js/aframe-gif-component.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets timeout="18000">
+        <img id="video1" src="assets/01/dimension1.gif">
+        <img id="video2" src="assets/01/dimension2.gif">
+        <img id="video3" src="assets/01/dimension3.gif">
+        <img id="video4" src="assets/01/dimension4.gif">
+        <img id="video5" src="assets/01/dimension5.gif">
+        <img id="video6" src="assets/01/dimension6.gif">
+      </a-assets>
+      <a-sun-sky></a-sun-sky>
+      <a-entity id="panel1" geometry="primitive:plane;width:16;height:9" material="shader:gif;src:#video1" gif="" position="-20 10 -20" look-at="#player"></a-entity>
+      <a-entity id="panel2" geometry="primitive:plane;width:16;height:9" material="shader:gif;src:#video2" gif="" position="0 10 -20" look-at="#player"></a-entity>
+      <a-entity id="panel3" geometry="primitive:plane;width:16;height:9" material="shader:gif;src:#video3" gif="" position="20 10 -20" look-at="#player"></a-entity>
+      <a-entity id="panel4" geometry="primitive:plane;width:16;height:9" material="shader:gif;src:#video4" gif="" position="-20 0 -20" look-at="#player"></a-entity>
+      <a-entity id="panel5" geometry="primitive:plane;width:16;height:9" material="shader:gif;src:#video5" gif="" position="0 0 -20" look-at="#player"></a-entity>
+      <a-entity id="panel6" geometry="primitive:plane;width:16;height:9" material="shader:gif;src:#video6" gif="" position="20 0 -20" look-at="#player"></a-entity>
+      <a-entity position="0 -1 0" id="player">
+        <a-camera></a-camera>
+      </a-entity>
+    </a-scene>
+    <button id="play-button">Loading...</button>
+    <script src="js/app.js"></script>
+  </body>
+</html>
